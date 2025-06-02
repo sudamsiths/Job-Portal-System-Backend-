@@ -60,8 +60,9 @@ public class JobService {
         return null;
     }
 
-    public void updateJobs(JobDTO jobDTO ){
-        JobEntity jobEntity =new JobEntity();
+    public void updateJobs(JobDTO jobDTO){
+        JobEntity jobEntity = new JobEntity();
+        jobEntity.setJob_id(jobDTO.getJob_id());
         jobEntity.setTitle(jobDTO.getTitle());
         jobEntity.setDescription(jobDTO.getDescription());
         jobEntity.setSalary(jobDTO.getSalary());

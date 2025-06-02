@@ -61,11 +61,12 @@ public class CompanyService {
         return null;
     }
 
-    public void updateCompany(CompanyDTO companyDTO ){
-        CompanyEntity companyEntity =new CompanyEntity();
+    public void updateCompany(CompanyDTO companyDTO){
+        CompanyEntity companyEntity = new CompanyEntity();
+        companyEntity.setCompany_id(companyDTO.getCompany_id());
         companyEntity.setName(companyDTO.getName());
-        companyEntity.setIndustry(companyDTO.getIndustry());
         companyEntity.setLocation(companyDTO.getLocation());
+        companyEntity.setIndustry(companyDTO.getIndustry());
 
         companyRepository.save(companyEntity);
     }
